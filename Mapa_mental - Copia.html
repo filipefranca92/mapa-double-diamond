@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Mental Estratégico - Double Diamond</title>
+    
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ 
+            startOnLoad: true, 
+            theme: 'base',
+            themeVariables: {
+                fontFamily: 'Segoe UI, sans-serif',
+                primaryColor: '#d1e3f8',
+                primaryTextColor: '#2c3e50',
+                primaryBorderColor: '#8faadc',
+                lineColor: '#5b9bd5',
+                secondaryColor: '#e8f4f8',
+                tertiaryColor: '#ffffff'
+            }
+        });
+    </script>
+
+    <style>
+        body { 
+            background-color: #f8fafc; 
+            margin: 0; 
+            padding: 40px;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header { text-align: center; margin-bottom: 30px; }
+        h1 { color: #33475b; font-size: 28px; margin-bottom: 5px; }
+        .subtitle { color: #7f8c8d; font-size: 16px; }
+
+        .map-card {
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            padding: 40px;
+            width: 90%;
+            max-width: 1100px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .mermaid { width: 100%; }
+
+        .footer-note { margin-top: 20px; color: #94a3b8; font-size: 13px; }
+        
+        @media print {
+            .btn-print { display: none; }
+            body { padding: 0; background: white; }
+            .map-card { box-shadow: none; width: 100%; }
+        }
+
+        .btn-print {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #5b9bd5;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-print:hover { background: #4a82b8; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Metodologia Double Diamond</h1>
+        <div class="subtitle">Projeto: Sistema de Gestão de Despesas Full-Stack (Django + MySQL)</div>
+    </div>
+
+    <div class="map-card">
+        <div class="mermaid">
+            mindmap
+              root((SISTEMA DE DESPESAS))
+                1. DESCOBRIR (Divergir)
+                  Problemática
+                    Análise de Desorganização
+                    Uso de Meios Analógicos
+                  Ferramentas Obrigatórias
+                    Pesquisa de Mercado
+                    Mapa de Empatia
+                    Entrevistas
+                  Ferramentas Extras
+                    Matriz CSD
+                    Desk Research
+                2. DEFINIR (Convergir)
+                  Desafio de Inovação
+                    Dashboard Intuitivo
+                    Cálculos em Tempo Real
+                  Ferramentas Obrigatórias
+                    Personas
+                    Jornada do Usuário
+                  Ferramentas Extras
+                    Os 5 Porquês
+                    Critérios de Aceite
+                3. DESENVOLVER (Divergir)
+                  Solução Técnica
+                    Arquitetura MTV Django
+                    Persistência MySQL
+                  Ferramentas Obrigatórias
+                    Brainstorming
+                    Wireframes
+                  Ferramentas Extras
+                    Design System Figma
+                    Modelo de Dados DER
+                4. ENTREGAR (Convergir)
+                  Inovação Final
+                    UX de Alta Performance
+                    Consistência Financeira
+                  Ferramentas Obrigatórias
+                    MVP (Produto Mínimo)
+                    Testes de Usabilidade
+                  Ferramentas Extras
+                    Metodologia Ágil Scrum
+                    GitHub (Versionamento)
+        </div>
+    </div>
+
+    <button class="btn-print" onclick="window.print()">Exportar para PDF / Imprimir</button>
+    <div class="footer-note">* Utilize o atalho Win+Shift+S para capturar esta tela com nitidez máxima para o seu trabalho.</div>
+
+</body>
+</html>
